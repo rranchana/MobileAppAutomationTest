@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     working_directory: ~/Project/MobileAutomationTest
-     docker:
+    docker:
       - image: circleci/android:api-27-alpha
     environment:
       _JAVA_OPTIONS: "-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Xms1024m -Xmx1536m -XX:MaxMetaspaceSize=1536m"

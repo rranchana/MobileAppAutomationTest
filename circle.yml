@@ -19,9 +19,6 @@ jobs:
         name: Download Dependencies
         command: ./AndroidDemo/gradlew dependencies
     - run:
-        name: Accept all sdk licence
-        command: yes | sdkmanager --licenses
-    - run:
         name: Setup emulator
         command: sdkmanager "platform-tools" "platforms;android-24" "emulator"
     - run:

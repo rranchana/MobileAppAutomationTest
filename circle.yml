@@ -18,7 +18,7 @@ jobs:
     - run:
         name: Download Dependencies
         command: ./AndroidDemo/gradlew dependencies
-   - run:
+    - run:
         name: Setup emulator
         command: sdkmanager "system-images;android-24;google_apis;armeabi-v7a" && echo "no" | avdmanager create avd  -n test -k "system-images;android-24;google_apis;armeabi-v7a"
     - run:

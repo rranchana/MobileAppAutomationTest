@@ -7,7 +7,7 @@ jobs:
     - JVM_OPTS: -Xmx3200m
     steps:
     - checkout:
-        path: ~/AndroidDemo
+        path: ~/Project
     - run:
         name: checking path of git directory
         command: pwd

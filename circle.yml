@@ -11,7 +11,7 @@ jobs:
     - run:
         name: checking path of git directory
         command: pwd
-- run:
+    - run:
     name: Chmod permissions
     command: sudo chmod +x ./AndroidDemo/gradlew
     - run:

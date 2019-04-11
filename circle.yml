@@ -12,8 +12,8 @@ jobs:
         name: checking path of git directory
         command: pwd
     - run:
-    name: Chmod permissions
-    command: sudo chmod +x ./AndroidDemo/gradlew
+        name: Chmod permissions
+        command: sudo chmod +x ./AndroidDemo/gradlew
     - run:
         name: Download Dependencies
         command: ./AndroidDemo/gradlew dependencies
@@ -40,4 +40,3 @@ jobs:
         destination: reports
     - store_test_results:
         path: app/build/test-results
-

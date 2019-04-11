@@ -25,4 +25,12 @@ jobs:
       - run:
           name: Run all checks
           command: ./gradlew check
+      - run:
+        name: Run Test case
+        command: cd AndroidDemo && ./gradlew app:connectedAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.mytaxi.android_demo.tests.CallDriverTest
+      - store_artifacts:
+        path: app/build/reports
+        destination: reports
+      - store_test_results:
+        path: app/build/test-results
     

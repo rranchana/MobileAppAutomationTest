@@ -19,6 +19,9 @@ jobs:
         name: Download Dependencies
         command: ./AndroidDemo/gradlew dependencies
     - run:
+        name: Setup test
+        command: yes | sdkmanager --licenses && sdkmanager --update;sdkmanager "system-images;android-24;default;armeabi-v7a"
+    - run:
         name: Setup emulator
         command: yes | sdkmanager --licenses && sdkmanager --update;sdkmanager "platform-tools" "platforms;android-24" "emulator" 
     - run:

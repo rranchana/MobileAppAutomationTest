@@ -18,15 +18,9 @@ jobs:
     - run:
         name: Download Dependencies
         command: ./AndroidDemo/gradlew dependencies
-    - run:
-        name: Setup test
-        command: sdkmanager "system-images;android-24;google_apis;armeabi-v7a" && echo "no" | avdmanager create avd  -n test -k "system-images;android-24;google_apis;armeabi-v7a"
-    - run:
+   - run:
         name: Setup emulator
-        command: yes | sdkmanager --licenses && sdkmanager --update;sdkmanager "platform-tools" "platforms;android-24" "emulator" 
-    - run:
-        name: Create AVD
-        command: echo "no" | avdmanager create avd -n test -k "system-images;android-24;google_apis;armeabi-v7a"
+        command: sdkmanager "system-images;android-24;google_apis;armeabi-v7a" && echo "no" | avdmanager create avd  -n test -k "system-images;android-24;google_apis;armeabi-v7a"
     - run:
         name: Launch emulator
         command: export LD_LIBRARY_PATH=${ANDROID_HOME}/emulator/lib64:${ANDROID_HOME}/emulator/lib64/qt/lib && emulator64-arm -avd test -noaudio -no-boot-anim -no-window -accel on -skin 768x1220
@@ -47,7 +41,6 @@ jobs:
         destination: reports
     - store_test_results:
         path: app/build/test-results
-
         background: true
     - run:
         name: Wait emulator

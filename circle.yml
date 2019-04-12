@@ -10,6 +10,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: path
+          command: pwd
+      - run:
           name: Chmod permissions
           command: sudo chmod +x ./AndroidDemo/gradlew
       - run:

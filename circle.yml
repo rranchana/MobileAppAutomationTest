@@ -29,9 +29,9 @@ jobs:
       - run:
           name: Wait emulator
           command: |
-          circle-android wait-for-boot
-          sleep 30
-          adb shell input keyevent 82     
+           circle-android wait-for-boot
+           sleep 30
+           adb shell input keyevent 82     
       - run:
           name: Run UI Tests
           command: chmod +x android-wait-for-emulator.sh && ./android-wait-for-emulator.sh && ./AndroidDemo/gradlew app:connectedAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.mytaxi.android_demo.tests.CallDriverTest

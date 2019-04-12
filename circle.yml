@@ -10,7 +10,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: path
+          name: Path
           command: pwd
       - run:
           name: Chmod permissions

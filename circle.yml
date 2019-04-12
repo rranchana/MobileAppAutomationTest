@@ -4,10 +4,10 @@ jobs:
     working_directory: ~/MobileAutomationTest
     docker:
       - image: circleci/android:api-27-alpha
-     environment:
+    environment:
       _JAVA_OPTIONS: "-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Xms1024m -Xmx1536m -XX:MaxMetaspaceSize=1536m"
       GRADLE_OPTS: '-Dorg.gradle.daemon=false -Dorg.gradle.parallel=false -Dkotlin.incremental=false -DdisablePreDex'
-     steps:
+    steps:
       - run:
           name: Setup emulator
           command: echo y | sdkmanager "platform-tools" "platforms;android-22" "emulator" "system-images;android-22;default;armeabi-v7a" && echo "no" | avdmanager create avd -n test -k "system-images;android-22;default;armeabi-v7a"

@@ -1,6 +1,7 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/Project/MobileAutomationTest
     docker:
       - image: circleci/android:api-27-alpha
     environment:
@@ -35,12 +36,13 @@ jobs:
            adb shell input keyevent 82 
       - run:
           name: Run UI Tests
-          command: cd AndroidDemo && ./gradlew       connectedAndroidTest
+          command: cd AndroidDemo && ./gradlew connectedAndroidTest
       - store_artifacts:
           path: library/build/reports
           destination: reports
       - store_test_results:
           path: library/build/test-results
+          destination: reports
 workflows:
   version: 2
   workflow:

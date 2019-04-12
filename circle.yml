@@ -35,11 +35,11 @@ jobs:
            adb shell input keyevent 82 
       - run:
           name: Run UI Tests
-          command: cd AndroidDemo && ./gradlew connectedAndroidTest
-     - store_artifacts:
+          command: cd AndroidDemo && ./gradlew       connectedAndroidTest
+      - store_artifacts:
           path: library/build/reports
           destination: reports
-     - store_test_results:
+      - store_test_results:
           path: library/build/test-results
 workflows:
   version: 2

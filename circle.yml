@@ -9,7 +9,6 @@ jobs:
       GRADLE_OPTS: '-Dorg.gradle.daemon=false -Dorg.gradle.parallel=false -Dkotlin.incremental=false -DdisablePreDex'
     steps:
       - checkout:
-          path: ~/Project/MobileAutomationTest/
       - run:
           name: Chmod permissions
           command: sudo chmod +x ./AndroidDemo/gradlew

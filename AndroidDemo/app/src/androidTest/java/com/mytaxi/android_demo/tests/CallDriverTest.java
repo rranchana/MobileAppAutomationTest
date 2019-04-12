@@ -39,11 +39,11 @@ public class CallDriverTest {
 
     @Test
     public void shouldCallDriverSuccessfully() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         homePage.searchDriverByName(searchText);
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         homePage.selectDriver(driverName);
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         driverProfile.clickCallButton();
     }
 

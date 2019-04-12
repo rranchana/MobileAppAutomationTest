@@ -8,7 +8,7 @@ jobs:
       _JAVA_OPTIONS: "-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Xms1024m -Xmx1536m -XX:MaxMetaspaceSize=1536m"
       GRADLE_OPTS: '-Dorg.gradle.daemon=false -Dorg.gradle.parallel=false -Dkotlin.incremental=false -DdisablePreDex'
     steps:
-      - checkout:
+      - checkout
       - run:
           name: Chmod permissions
           command: sudo chmod +x ./AndroidDemo/gradlew

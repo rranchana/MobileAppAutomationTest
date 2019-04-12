@@ -36,7 +36,7 @@ public class CallDriverTest {
         loginPage.typePassword(password);
         loginPage.clickOnLoginButton();
     }
-
+//TODO: Implement Idling Resources to optimize test
     @Test
     public void shouldCallDriverSuccessfully() throws InterruptedException {
         Thread.sleep(1000);

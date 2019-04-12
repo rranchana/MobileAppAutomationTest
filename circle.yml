@@ -27,11 +27,11 @@ jobs:
           name: Wait emulator
           command: |
            circle-android wait-for-boot
-           sleep 100
+           sleep 50
            adb shell input keyevent 82     
       - run:
           name: Run UI Tests
-          command: cd ./AndroidDemo/gradlew app:connectedAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.mytaxi.android_demo.CallDriverTest
+          command: cd /AndroidDemo/gradlew connectedAndroidTest
   
 workflows:
   version: 2

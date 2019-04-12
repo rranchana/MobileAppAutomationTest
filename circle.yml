@@ -24,7 +24,10 @@ jobs:
           background: true 
       - run:
          name: Wait emulator
-         command:  chmod +x android-wait-for-emulator.sh && ./android-wait-for-emulator.sh && ./AndroidDemo/gradlew connectedAndroidTest   
+         command:  |
+           circle-android wait-for-boot
+           sleep 30
+           adb shell input keyevent 82 
       - run:
           name: Run UI Tests
           command: cd /AndroidDemo/gradlew connectedAndroidTest

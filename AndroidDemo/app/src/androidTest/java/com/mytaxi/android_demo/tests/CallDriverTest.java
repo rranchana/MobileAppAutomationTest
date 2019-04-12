@@ -31,7 +31,7 @@ public class CallDriverTest {
     public GrantPermissionRule mGrantPermissionRule = GrantPermissionRule.grant("android.permission.ACCESS_FINE_LOCATION");
 
     @Before
-    public void onPrepare() {
+    public void logIntoApplication() {
         loginPage.typeUserName(userName);
         loginPage.typePassword(password);
         loginPage.clickOnLoginButton();

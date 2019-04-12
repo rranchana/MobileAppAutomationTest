@@ -41,10 +41,5 @@ jobs:
           path: AndroidDemo/app/build/reports
           destination: reports
       - store_test_results:
-          path: library/build/test-results
-          destination: reports
-workflows:
-  version: 2
-  workflow:
-    jobs:
-    - build
+          path: AndroidDemo/app/build/test-results
+   

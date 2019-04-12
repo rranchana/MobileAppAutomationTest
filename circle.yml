@@ -38,7 +38,7 @@ jobs:
           name: Run UI Tests
           command: cd AndroidDemo && ./gradlew connectedAndroidTest
       - store_artifacts:
-          path: library/build/reports
+          path: app/build/reports
           destination: reports
       - store_test_results:
           path: library/build/test-results

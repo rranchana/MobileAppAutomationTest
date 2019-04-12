@@ -42,4 +42,5 @@ jobs:
           destination: reports
       - store_test_results:
           path: AndroidDemo/app/build/test-results
+          destination: test-results
    

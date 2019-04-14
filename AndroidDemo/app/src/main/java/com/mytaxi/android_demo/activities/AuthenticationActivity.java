@@ -16,6 +16,7 @@ import android.widget.EditText;
 import com.mytaxi.android_demo.App;
 import com.mytaxi.android_demo.R;
 import com.mytaxi.android_demo.dependencies.component.AppComponent;
+import com.mytaxi.android_demo.utils.CustomIdlingResources;
 import com.mytaxi.android_demo.utils.network.HttpClient;
 import com.mytaxi.android_demo.utils.storage.SharedPrefStorage;
 
@@ -67,6 +68,7 @@ public class AuthenticationActivity extends AppCompatActivity {
     private void attemptLogin() {
         final String username = mEditTextUsername.getText().toString();
         final String password = mEditTextPassword.getText().toString();
+        CustomIdlingResources.increment();
         mHttpClient.fetchUser(RANDOM_USER_SEED, new HttpClient.UserCallback() {
             @Override
             public void run() {
